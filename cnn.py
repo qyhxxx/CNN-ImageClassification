@@ -160,6 +160,7 @@ n_epoch=10
 batch_size=64
 saver=tf.train.Saver()
 sess=tf.Session()
+writer = tf.summary.FileWriter("logs/", sess.graph)
 sess.run(tf.global_variables_initializer())
 for epoch in range(n_epoch):
     start_time = time.time()
